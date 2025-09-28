@@ -64,6 +64,28 @@ h1 + p {
   font-weight: bold;
 }
 
+a:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:active {
+  color: red;
+}
+
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+input:focus {
+  border: 1px solid #aaa;
+}
+
 /* CSS for navigation bar */
 
 .navbar {
