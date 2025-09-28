@@ -2,4 +2,4 @@
 
 This is a personal website build using the Hack4Impact Starter Pack!
 
-Currently a WIP
+[Visit it Here!](https://logan-schmid.github.io/)
