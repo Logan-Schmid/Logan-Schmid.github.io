@@ -124,6 +124,7 @@ input:focus {
 } */
 
 /* CSS for portfolio page */
+
 .project {
   display: flex;
   align-items: center;
@@ -139,6 +140,17 @@ input:focus {
 
 .project-name {
   font-size: 20px;
+}
+
+/*CSSfor resume page */
+
+.resume {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px;
+  border-radius: 5px;
 }
 
 /* CSS for home page */
@@ -219,6 +231,27 @@ input:focus {
 .resume h2 {
   font-family: Georgia;
 }
+
+/* CSS for contact page */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Georgia;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+} 
 
 /* CSS for page footer */
 
