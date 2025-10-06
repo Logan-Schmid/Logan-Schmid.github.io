@@ -4,8 +4,9 @@
   --cg-blue: rgb(36, 94, 255);
   --cg-grey: rgb(243, 243, 243);
   --cg-white: rgb(255, 255, 255);
-  --cg-beige: rgba(255, 205, 162, 0.15);
-  --cg-teal: rgba(91, 123, 122, 1);
+  --cg-beige: rgba(255, 205, 162, 0.5);
+  --cg-teal: rgb(22, 104, 78);
+  --cg-teal-light: color-mix(in oklab, var(--cg-teal), white 20%);
 
   --cg-dark: #3e362e;
   --cg-brown: #865d36;
@@ -94,6 +95,35 @@ input:focus {
   text-decoration: None;
 }
 
+.button,
+.button:link,
+.button:visited,
+.button:active,
+.button:focus {
+  background: linear-gradient(to right, var(--cg-teal), black);
+  border: none;
+  color: var(--cg-white); /* sets link text color */
+  font-family: monospace;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none; /* removes underline */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.24); /* raised shadow */
+}
+
+.button:hover {
+  background: linear-gradient(to right, var(--cg-teal-light), black);
+}
+
+.button:active {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.18); /* reduce shadow for pressed look */
+  transform: translateY(2px);              /* move button down */
+}
+
+/* .button:hover {
+  background-color: var(--cg-blue);
+} */
+
 /* CSS for home page */
 
 .about {
@@ -165,6 +195,12 @@ input:focus {
 
 .navbar a:hover {
   color: var(--cg-blue);
+}
+
+/* CSS for resume page */
+
+.resume h2 {
+  font-family: Georgia;
 }
 
 /* CSS for page footer */
