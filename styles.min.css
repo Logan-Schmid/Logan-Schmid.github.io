@@ -98,7 +98,6 @@ input:focus {
 .button,
 .button:link,
 .button:visited,
-.button:active,
 .button:focus {
   background: linear-gradient(to right, var(--cg-teal), black);
   border: none;
@@ -108,7 +107,7 @@ input:focus {
   text-align: center;
   border-radius: 6px;
   text-decoration: none; /* removes underline */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.24); /* raised shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24); /* raised shadow */
 }
 
 .button:hover {
@@ -116,13 +115,31 @@ input:focus {
 }
 
 .button:active {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.18); /* reduce shadow for pressed look */
-  transform: translateY(2px);              /* move button down */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18); /* reduce shadow for pressed look */
+  transform: translateY(2px); /* move button down */
 }
 
 /* .button:hover {
   background-color: var(--cg-blue);
 } */
+
+/* CSS for portfolio page */
+.project {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px;
+  border-radius: 5px;
+}
+
+.project-details {
+  text-align: center;
+}
+
+.project-name {
+  font-size: 20px;
+}
 
 /* CSS for home page */
 
