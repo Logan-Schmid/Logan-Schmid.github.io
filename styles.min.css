@@ -1,9 +1,25 @@
+:root {
+  /* variables */
+  --cg-black: rgb(30, 32, 32);
+  --cg-blue: rgb(36, 94, 255);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+  --cg-beige: rgba(255, 205, 162, 0.15);
+  --cg-teal: rgba(91, 123, 122, 1);
+
+  --cg-dark: #3e362e;
+  --cg-brown: #865d36;
+  --cg-clay: #93785b;
+  --cg-hazel: #ac8969;
+  --cg-gray-brown: #a69080;
+}
+
 html {
   height: 100%;
 }
 
 body {
-  background-color: white;
+  background: linear-gradient(to right, var(--cg-grey), white);
   position: relative;
   min-height: 100vh;
   padding: 0;
@@ -21,7 +37,7 @@ main {
 }
 
 p {
-  font-family: sans-serif;
+  font-family: PPMori;
   font-weight: bold;
   font-size: 14px;
 }
@@ -30,11 +46,6 @@ p.title {
   font-style: italic;
   font-weight: 500;
   font-size: 16px;
-}
-
-h1#main-title {
-  color: red;
-  background-color: blue;
 }
 
 /* This is a CSS comment. This CSS 
@@ -50,18 +61,6 @@ input[required] {
 input[type="text"] {
   height: 10%;
   width: 10%;
-}
-
-/* Child selectors example */
-#pos-list > li {
-  border-color: red;
-  border-style: dashed;
-  border-width: 1px;
-}
-
-/* Adjacent selectors example */
-h1 + p {
-  font-weight: bold;
 }
 
 a:link {
@@ -84,6 +83,45 @@ a:hover {
 
 input:focus {
   border: 1px solid #aaa;
+}
+
+.logo a {
+  font-family: Georgia;
+  font-size: medium;
+}
+
+.logo a:hover {
+  text-decoration: None;
+}
+
+/* CSS for home page */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.about-text {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* CSS for navigation bar */
@@ -123,6 +161,10 @@ input:focus {
   margin: 0 12px;
   text-decoration: none;
   letter-spacing: 2px;
+}
+
+.navbar a:hover {
+  color: var(--cg-blue);
 }
 
 /* CSS for page footer */
