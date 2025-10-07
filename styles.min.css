@@ -35,10 +35,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Georgia;
 }
 
 p {
-  font-family: PPMori;
+  font-family: Georgia;
   font-weight: bold;
   font-size: 14px;
 }
@@ -47,21 +48,6 @@ p.title {
   font-style: italic;
   font-weight: 500;
   font-size: 16px;
-}
-
-/* This is a CSS comment. This CSS 
-* selects all input tags that have the 
-* required attribute. */
-input[required] {
-  letter-spacing: 2px;
-  text-decoration: underline;
-}
-
-/* This CSS selects all input tags that 
-* have a type attribute with the value "text"*/
-input[type="text"] {
-  height: 10%;
-  width: 10%;
 }
 
 a:link {
@@ -98,7 +84,8 @@ input:focus {
 .button,
 .button:link,
 .button:visited,
-.button:focus {
+.button:focus,
+input[type="submit"] {
   background: linear-gradient(to right, var(--cg-teal), black);
   border: none;
   color: var(--cg-white); /* sets link text color */
@@ -110,47 +97,16 @@ input:focus {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24); /* raised shadow */
 }
 
-.button:hover {
+.button:hover,
+input[type="submit"]:hover {
   background: linear-gradient(to right, var(--cg-teal-light), black);
+  cursor: pointer;
 }
 
-.button:active {
+.button:active,
+input[type="submit"]:active {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18); /* reduce shadow for pressed look */
   transform: translateY(2px); /* move button down */
-}
-
-/* .button:hover {
-  background-color: var(--cg-blue);
-} */
-
-/* CSS for portfolio page */
-
-.project {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  border: 1px;
-  border-radius: 5px;
-}
-
-.project-details {
-  text-align: center;
-}
-
-.project-name {
-  font-size: 20px;
-}
-
-/*CSSfor resume page */
-
-.resume {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  border: 1px;
-  border-radius: 5px;
 }
 
 /* CSS for home page */
@@ -226,7 +182,54 @@ input:focus {
   color: var(--cg-blue);
 }
 
+/* CSS for portfolio page */
+
+.project {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px;
+  border-radius: 5px;
+}
+
+.project-details {
+  text-align: center;
+}
+
+.project-name {
+  font-size: 20px;
+}
+
 /* CSS for resume page */
+
+.resume section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensures children line up at left edge */
+  text-align: left; /* All child text is left-justified */
+  padding: 12px;
+  border: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.resume .entry {
+  margin-left: 10px;
+  margin-right: 30px;
+}
+
+.section-title {
+  width: 100%; /* Allows the text-align property to work if parent is flex */
+  text-align: center; /* Centers the h2 only */
+  margin-bottom: 12px; /* Optional: Adds spacing below section title */
+}
+
+.resume p {
+  font-weight: normal;
+}
 
 .resume h2 {
   font-family: Georgia;
@@ -251,7 +254,18 @@ textarea {
   border-radius: 4px;
   font-size: 16px;
   resize: none;
-} 
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-form input[type="submit"] {
+  width: 100px; /* or whatever width you prefer */
+  margin-top: 10px;
+}
 
 /* CSS for page footer */
 
