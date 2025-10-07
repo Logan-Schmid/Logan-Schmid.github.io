@@ -33,8 +33,8 @@ main {
   padding: 0 20px 40px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
   font-family: Georgia;
 }
 
@@ -202,6 +202,12 @@ input[type="submit"]:active {
 }
 
 /* CSS for resume page */
+
+.resume {
+  width: 800px; /* set a width or max-width */
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .resume section {
   display: flex;
